@@ -1,6 +1,7 @@
 """
 exercise 17
 """
+import time
 from functools import reduce
 from multiprocessing import Pool, cpu_count
 
@@ -26,9 +27,10 @@ def factorial_map_parallel(n):
 
 
 if __name__ == "__main__":
-    import time
+    # took me over an hour, don't recommend running it!!!
     n = 10_000_000
     start_time = time.time()
     result = factorial_map_parallel(n)
     end_time = time.time()
     print(f"{n}! calculated using multiprocessing in {end_time - start_time:.2f} seconds.")
+    # 10000000! calculated using multiprocessing in 4153.37 seconds.
